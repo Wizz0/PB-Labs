@@ -45,13 +45,3 @@ int main(){
 		cout << "INVALID";
 	}                                                                                                          
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
