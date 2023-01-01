@@ -1,4 +1,5 @@
 //A2
+//Угол A задан в градусах. Найти его величину в радианах.
 
 #include <iostream>
 using namespace std;
