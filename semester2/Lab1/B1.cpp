@@ -10,80 +10,57 @@ using namespace std;
 int solve(vector<vector<int>>& inp) {
     int n = inp.size();
     int maxLen = 0;
-
+    int len = 0;
+    
     //по горизонтали
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n;) {
-            if (inp[i][j] == 0) {
-                int len = 1;
-                j++;
-                while ((j < n) and (inp[i][j] == 0)) {
-                    len++;
-                    j++;
-                }
-                if (len >= maxLen)
-                    maxLen = len;
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+            if (inp[i][j] == 0){
+                len++;
             }
-            else {
-                j++;
+            
+            if (len >= maxLen){
+                maxLen = len;
             }
         }
+        len = 0;
     }
 
     //по вертикали
     for (int j = 0; j < n; j++) {
-        for (int i = 0; i < n;) {
-            if (inp[i][j] == 0) {
-                int len = 1;
-                i++;
-                while ((i < n) and (inp[i][j] == 0)) {
-                    len++;
-                    i++;
-                }
-                if (len >= maxLen)
-                    maxLen = len;
+        for (int i = 0; i < n; i++) {
+            if (inp[i][j] == 0){
+                len++;
             }
-            else {
-                i++;
+            
+            if (len >= maxLen){
+                maxLen = len;
             }
         }
+        len = 0;
     }
 
     //по главной диагонали
-    for (int k = 0; k < n; k++) {
-        int i = k, j = 0;
-        int len = 0;
-        while ((i < n) and (j < n)) {
-            if (inp[i][j] == 0) {
-                len++;
-            }
-            else {
-                len = 0;
-            }
-            if (len >= maxLen)
-                    maxLen = len;
-            i++;
-            j++;
+    for (int i = 0; i < n; i++) {
+        if (inp[i][i] == 0)
+            len++;
+        
+        if (len >= maxLen){
+            maxLen = len;
         }
     }
+    len = 0;
 
     //по побочной диагонали
-    for (int k = 0; k < n; k++) {
-        int i = k, j = n - 1;
-        int len = 0;
-        while ((i < n) and (j >= 0)) {
-            if (inp[i][j] == 0) {
-                len++;
-            }
-            else {
-                len = 0;
-            }
-            if (len >= maxLen)
-                    maxLen = len;
-            i++;
-            j--;
+    for (int i = 0; i < n; i++) {
+        if (inp[i][n-1-i] == 0) {
+            len++;
+        }
+        else if (len >= maxLen){
+            maxLen = len;
         }
     }
+    len = 0;
     
     return maxLen;
 }
