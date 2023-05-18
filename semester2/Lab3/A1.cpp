@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -38,7 +39,7 @@ class IT_Student{
 int main(){
    int n; cin >> n;
    
-   IT_Student students[n];
+   vector<IT_Student> students;
    
    for (int i=0; i<n; i++){
        string name, surname, group, favouriteLang;
