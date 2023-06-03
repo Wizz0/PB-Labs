@@ -33,8 +33,8 @@ public:
         ofstream fout(filename);
         if (fout.is_open()) {
             for (int i = 0; i < 10; i++) {
-                int index = gen() % dictionary.size();
-                fout << dictionary[index] << " ";
+                int j = gen() % dictionary.size();
+                fout << dictionary[j] << " ";
             }
             fout.close();
             s++;
