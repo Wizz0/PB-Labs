@@ -1,4 +1,8 @@
-//a1
+//A1
+
+//Напишите функцию возведения целого числа в целую неотрицательную степень
+//long long power(long long x, unsigned k), которая вычисляет xk.
+//Надо unit-тестировать эту функцию.
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
