@@ -1,5 +1,7 @@
 //A1
 
+//Дан массив целых чисел. Подсчитайте, сколько в массиве элементов, больших предыдущего. Выведите ответ.
+
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 
