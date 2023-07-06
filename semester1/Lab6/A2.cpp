@@ -1,5 +1,8 @@
 //A2
 
+//Дана строка, состоящия из латинских букв и пробелов. Подсчитайте количество слов,
+//начинающихся с латинской буквы a (или A).
+
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 
@@ -22,7 +25,7 @@ int solve(string s)
 }
 
 TEST_CASE("Dulustan's tests"){
-    CHECK(solve("Madam, I�m Adam")==1);
+    CHECK(solve("Madam, I’m Adam")==1);
     CHECK(solve("An apple is a fruit of all fruits")==4);
     CHECK(solve("i love algorithms and automata do you")==3);    
 }
